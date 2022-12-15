@@ -1,0 +1,283 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+
+  grid-template: 50px 1fr 50px / 5px 1fr 5px;
+
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.container div {
+
+
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #E2E2E2;
+}
+
+.or_wp {
+  font-family: Ariel, sans-serif;
+  font-size: 20px;
+  margin-right:20px;
+}
+
+.content {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer {
+  display: flex;
+  grid-column: 1 / 4;
+  background-color: #E2E2E2;
+  justify-content: space-between;
+}
+
+.icons {
+  height: 30px;
+  width: 30px;
+}
+
+.footer_items{
+  margin: 0 5px;
+  color: #0307FF;
+}
+
+.upper_header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: auto 8px;
+  height:30px;
+  width: 90px;
+}
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+}
+
+ul li {
+  padding: 5px;
+  margin-left: 10px;
+  color: #0307FF;
+  font-family: Arial, sans-serif;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+a:link {
+  text-decoration: none;
+  color: #0307FF;
+}
+
+a:visited {
+  color: #6A1AEA;
+  text-decoration: none
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.navigation_bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  display: none;
+}
+
+.heading {
+  height: 20px;
+  width: 100%;
+  color: #0307FF;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  margin-left: 8px;
+  margin-top: 10px;
+}
+
+table {
+  border: 5px double #0307FF;
+  border-collapse: collapse;
+}
+td {
+  border: 3px solid #0307FF;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+
+#hamburger-icon {
+  margin: auto 8px;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: #0307FF;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 300px){
+  #navigation_bar {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}
+@media only screen and (min-width: 600px){
+  #navigation_bar {
+    display: block;
+  }
+
+  #hamburger-icon {
+    display: none;
+  }
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+
+    grid-template: 100px 1fr 70px / 5px 1fr 5px;
+
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .header {
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #E2E2E2;
+  }
+
+  .upper_header {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin: 0px 8px;
+    height:50px;
+    width: 150px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #E2E2E2;
+  }
+  ul li {
+    margin: 0 5px;
+    color: #0307FF;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .heading {
+    height: 80px;
+    width: 100%;
+    color: #0307FF;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    margin-left: 8px;
+    margin-top: 30px;
+  }
+
+  table {
+    border: 8px double #0307FF;
+    border-collapse: collapse;
+  }
+  td {
+    border: 5px solid #0307FF;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  .footer_items{
+    margin: auto 20px;
+    color: #0307FF;
+  }
+
+}
